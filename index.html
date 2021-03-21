@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Memory Game</h1>
+
+    <p>
+      Welcome to the Memory Game! Press the Start button to play!
+      <br />
+    </p>
+    <details>
+      <summary>Rules of the Game</summary>
+      <p>
+        There are 8 rounds. In each round, repeat the pattern that is played
+        within the 10 second time limit to win. The patterns get faster and
+        longer each time, but you can make 2 mistakes before losing the game.
+      </p>
+    </details>
+
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">
+      Stop
+    </button>
+
+    <audio
+      id="moo"
+      loop="true"
+      src="https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fmoo.wav?v=1616039439866"
+    ></audio>
+    <audio
+      id="cry"
+      loop="true"
+      src="https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fcry.wav?v=1616039430793"
+    ></audio>
+    <audio
+      id="woof"
+      loop="true"
+      src="https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fwoof.wav?v=1616039445325"
+    ></audio>
+    <audio
+      id="meow"
+      loop="true"
+      src="https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fmeow.wav?v=1616039435780"
+    ></audio>
+    <audio
+      id="squeak"
+      loop="true"
+      src="https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fsqueak.wav?v=1616039442876"
+    ></audio>
+    <audio
+      id="growl"
+      loop="true"
+      src="https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fgrowl.wav?v=1616039433129"
+    ></audio>
+
+    <br />
+    <p id="clock"></p>
+
+    <div id="gameButtonArea">
+      <button
+        id="button1"
+        onclick="guess(1)"
+        onmousedown="startSound('moo')"
+        onmouseup="stopSound('moo')"
+        disabled
+      ></button>
+      <button
+        id="button2"
+        onclick="guess(2)"
+        onmousedown="startSound('cry')"
+        onmouseup="stopSound('cry')"
+        disabled
+      ></button>
+      <button
+        id="button3"
+        onclick="guess(3)"
+        onmousedown="startSound('woof')"
+        onmouseup="stopSound('woof')"
+        disabled
+      ></button>
+      <button
+        id="button4"
+        onclick="guess(4)"
+        onmousedown="startSound('meow')"
+        onmouseup="stopSound('meow')"
+        disabled
+      ></button>
+      <button
+        id="button5"
+        onclick="guess(5)"
+        onmousedown="startSound('squeak')"
+        onmouseup="stopSound('squeak')"
+        disabled
+      ></button>
+      <button
+        id="button6"
+        onclick="guess(6)"
+        onmousedown="startSound('growl')"
+        onmouseup="stopSound('growl')"
+        disabled
+      ></button>
+    </div>
+  </body>
+</html>
