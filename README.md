@@ -52,9 +52,7 @@ Here's a walkthrough of implemented user stories:
 
 |                                          _player wins_                                           |
 | :----------------------------------------------------------------------------------------------: |
-| ![won 1](https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fwon1.gif?v=1616282176898) |
-| ![won 2](https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fwon2.gif?v=1616282180500) |
-| ![won 3](https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fwon3.gif?v=1616282183370) |
+| ![won](https://cdn.glitch.com/abf70545-a6a3-4b66-ba8c-5d7478f63973%2Fwon.gif?v=1616288481464) |
 
 | _new pattern every game_                                                                                              |
 | --------------------------------------------------------------------------------------------------------------------- |
