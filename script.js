@@ -32,6 +32,11 @@ function startGame() {
   mistakes = 0;
   clueHoldTime = 3000;
   gamePlaying = true;
+  buttonPlaying = null;
+  timer = null;
+  startClock = null;
+  playClue = null;
+  enable = null;
 
   // swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
@@ -49,15 +54,21 @@ function stopGame() {
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
 
+  clearTone();
+  clearClock();
+  stopClock();
+  resetButtons();
+  stopClue();
+}
+
+function clearTone() {
   if (tonePlaying) {
     var animal = btnToAnimal(buttonPlaying);
     stopSound(animal);
     clearButton(buttonPlaying);
+    buttonPlaying = false;
+    tonePlaying = false;
   }
-
-  clearClock();
-  stopClock();
-  resetButtons();
 }
 
 function lightButton(btn) {
@@ -166,7 +177,6 @@ function enableButtons() {
   document.getElementById("button4").removeAttribute("disabled");
   document.getElementById("button5").removeAttribute("disabled");
   document.getElementById("button6").removeAttribute("disabled");
-  
 }
 
 function resetButtons() {
@@ -195,8 +205,6 @@ function playClueSequence() {
     delay += cluePauseTime;
     clueHoldTime -= (clueHoldTime - 200) / pattern.length;
   }
-  
-  
 }
 
 function stopClue() {
@@ -225,7 +233,7 @@ function guess(btn) {
   // guess is wrong
   if (btn != pattern[guessCounter]) {
     mistakes++;
-    
+
     if (mistakes == 3) {
       loseGame();
     } else {
